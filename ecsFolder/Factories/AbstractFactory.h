@@ -11,6 +11,7 @@ public:
     virtual Entity createPlayer(World& world, float x, float y, float width, float height) = 0;
     virtual Entity createWall(World& world, float x, float y, float width, float height) = 0;
     virtual Entity createSpring(World& world, float x, float y, float width, float height) = 0;
+    virtual Entity createSpike(World& world, float x, float y, float width, float height) = 0;
     virtual ~AbstractFactory() = default;
 };
 

@@ -106,3 +106,15 @@ Entity World::buildSpring(float x, float y, float width, float height) {
     return spring;
 }
 
+Entity World::buildSpike(float x, float y, float width, float height) {
+    Entity spring = SpikeBuilder(*this, abstractFactory)
+            .makeSpike(x, y, width, height)
+            .build();
+
+    if (collisionSystem) {
+        collisionSystem->AddEntity(spring, *this);
+    }
+
+    return spring;
+}
+

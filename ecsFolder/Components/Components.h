@@ -86,4 +86,6 @@ struct WallTag {};
 
 struct SpringTag {};
 
+struct SpikeTag {};
+
 #endif //INDIVIDUALPLATFORMER_COMPONENTS_H

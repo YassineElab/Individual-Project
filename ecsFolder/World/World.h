@@ -10,6 +10,7 @@
 #include "../Builder/PlayerBuilder.h"
 #include "../Builder/WallBuilder.h"
 #include "../Builder/SpringBuilder.h"
+#include "../Builder/SpikeBuilder.h"
 #include "../Systems/RenderSystem.h"
 #include "../Systems/MovementSystem.h"
 #include "../Systems/InputSystem.h"
@@ -51,6 +52,7 @@ public:
     Entity buildPlayer(float x, float y, float width, float height);
     Entity buildWall(float x, float y, float width, float height);
     Entity buildSpring(float x, float y, float width, float height);
+    Entity buildSpike(float x, float y, float width, float height);
 
     Entity createEntity();
 
@@ -66,7 +68,7 @@ public:
     std::unordered_map<Entity, PlayerTag> playerTags;
     std::unordered_map<Entity, WallTag> wallTags;
     std::unordered_map<Entity, SpringTag> springTags;
-    std::unordered_map<Entity, Spring> springs;
+    std::unordered_map<Entity, SpikeTag> spikeTags;
 };
 
 #endif //INDIVIDUALPLATFORMER_WORLD_H

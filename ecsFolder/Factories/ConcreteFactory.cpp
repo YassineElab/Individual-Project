@@ -50,8 +50,23 @@ Entity ConcreteFactory::createSpring(World& world, float x, float y, float width
             .bounds = {x, y, width, height},
             .isStatic = true
     };
-    world.springs[spring] = Spring{};
     world.springTags.insert({spring, SpringTag{}});
 
     return spring;
+}
+
+Entity ConcreteFactory::createSpike(World &world, float x, float y, float width, float height) {
+    Entity spike = world.createEntity();
+
+    world.transforms[spike] = Transform{.position = {x, y}};
+    world.positions[spike] = Position{x, y};
+    world.sizes[spike] = Size{width, height};
+    world.renderables[spike] = Renderable{{width, height}, sf::Color::Yellow};
+    world.colliders[spike] = Collider{
+            .bounds = {x, y, width, height},
+            .isStatic = true
+    };
+    world.spikeTags.insert({spike, SpikeTag{}});
+
+    return spike;
 }

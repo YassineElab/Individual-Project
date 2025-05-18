@@ -15,6 +15,7 @@ public:
     Entity createPlayer(World& world, float x, float y, float width, float height) override;
     Entity createWall(World& world, float x, float y, float width, float height) override;
     Entity createSpring(World& world, float x, float y, float width, float height) override;
+    Entity createSpike(World& world, float x, float y, float width, float height) override;
 };
 
 #endif //INDIVIDUALPLATFORMER_CONCRETEFACTORY_H
